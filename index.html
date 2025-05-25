@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سوپرمارکت VIP | خرید آنلاین با تجربه‌ای منحصر به فرد</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="logo animate__animated animate__fadeInDown">
+                <span>سوپرمارکت VIP</span>
+                <i class="fas fa-shopping-basket"></i>
+            </div>
+            <div class="user-actions">
+                <a id="login-link"><i class="fas fa-user"></i> ورود / ثبت‌نام</a>
+                <a id="support-link"><i class="fas fa-headset"></i> پشتیبانی</a>
+                <a><i class="fas fa-map-marker-alt"></i> پیگیری سفارش</a>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="جستجوی محصولات... (مثال: شیر، برنج، نوشابه)">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a id="home-link"><i class="fas fa-home"></i> خانه</a></li>
+            <li><a id="discounts-link"><i class="fas fa-percentage"></i> تخفیف‌ها</a></li>
+            <li><a id="best-sellers-link"><i class="fas fa-fire"></i> پرفروش‌ترین‌ها</a></li>
+            <li><a id="new-arrivals-link"><i class="fas fa-bolt"></i> جدیدترین‌ها</a></li>
+            <li><a id="featured-link"><i class="fas fa-gift"></i> پیشنهاد ویژه</a></li>
+            <li><a id="about-link"><i class="fas fa-info-circle"></i> درباره ما</a></li>
+            <li><a id="contact-link"><i class="fas fa-phone"></i> تماس با ما</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3><i class="fas fa-list"></i> دسته‌بندی محصولات</h3>
+            <ul>
+                <li><a class="category-link" data-category="لبنیات و تخم مرغ"><i class="fas fa-cheese"></i> لبنیات و تخم مرغ <span class="badge">جدید</span></a></li>
+                <li><a class="category-link" data-category="نوشیدنی‌ها"><i class="fas fa-wine-bottle"></i> نوشیدنی‌ها</a></li>
+                <li><a class="category-link" data-category="کالاهای اساسی"><i class="fas fa-utensils"></i> کالاهای اساسی</a></li>
+                <li><a class="category-link" data-category="میوه و سبزیجات"><i class="fas fa-apple-alt"></i> میوه و سبزیجات</a></li>
+                <li><a class="category-link" data-category="تنقلات"><i class="fas fa-cookie"></i> تنقلات</a></li>
+                <li><a class="category-link" data-category="مواد پروتئینی"><i class="fas fa-drumstick-bite"></i> مواد پروتئینی</a></li>
+                <li><a class="category-link" data-category="لوازم بهداشتی"><i class="fas fa-pump-soap"></i> لوازم بهداشتی</a></li>
+                <li><a class="category-link" data-category="لوازم آشپزخانه"><i class="fas fa-blender"></i> لوازم آشپزخانه</a></li>
+            </ul>
+            
+            <h3><i class="fas fa-filter"></i> فیلترها</h3>
+            <ul>
+                <li><a id="cheapest-filter"><i class="fas fa-money-bill-wave"></i> ارزان‌ترین</a></li>
+                <li><a id="expensive-filter"><i class="fas fa-gem"></i> گران‌ترین</a></li>
+                <li><a id="popular-filter"><i class="fas fa-eye"></i> پربازدیدترین</a></li>
+                <li><a id="top-rated-filter"><i class="fas fa-star"></i> پرامتیازترین</a></li>
+            </ul>
+            
+            <div class="price-filter">
+                <h3><i class="fas fa-sliders-h"></i> محدوده قیمت</h3>
+                <div class="price-range">
+                    <span id="min-price">۱۰,۰۰۰ تومان</span>
+                    <span id="max-price">۵۰۰,۰۰۰ تومان</span>
+                </div>
+                <div class="range-slider">
+                    <div class="progress"></div>
+                </div>
+                <div class="range-input">
+                    <input type="range" class="range-min" min="10000" max="500000" value="10000" step="1000">
+                    <input type="range" class="range-max" min="10000" max="500000" value="500000" step="1000">
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home Page (Default) -->
+            <div id="home-page">
+                <!-- Banner -->
+                <div class="banner animate__animated animate__fadeIn">
+                    <div class="banner-content">
+                        <div class="banner-text">
+                            <h2>فروش ویژه تابستانه!</h2>
+                            <p>تا ۵۰٪ تخفیف برای محصولات منتخب</p>
+                            <button class="banner-btn" id="view-products-btn">مشاهده محصولات <i class="fas fa-arrow-left"></i></button>
+                        </div>
+                        <div class="banner-image">
+                            <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Summer Sale">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Featured Products -->
+                <h2 class="category-title"><i class="fas fa-gift"></i> پیشنهادهای ویژه</h2>
+                <div class="products-grid" id="products-container"></div>
+                
+                <!-- Best Sellers -->
+                <h2 class="category-title"><i class="fas fa-crown"></i> پرفروش‌ترین محصولات</h2>
+                <div class="products-grid" id="best-sellers-container"></div>
+                
+                <!-- New Arrivals -->
+                <h2 class="category-title"><i class="fas fa-bolt"></i> جدیدترین محصولات</h2>
+                <div class="products-grid" id="new-arrivals-container"></div>
+            </div>
+            
+            <!-- Products Page -->
+            <div id="products-page" class="products-page">
+                <div class="page-header">
+                    <h1>همه محصولات</h1>
+                    <p>بهترین محصولات با کیفیت عالی</p>
+                </div>
+                <div class="products-grid" id="all-products-container"></div>
+            </div>
+            
+            <!-- Discounts Page -->
+            <div id="discounts-page" class="products-page">
+                <div class="page-header">
+                    <h1>تخفیف‌های ویژه</h1>
+                    <p>محصولات با تخفیف برای شما</p>
+                </div>
+                <div class="products-grid" id="discounts-container"></div>
+            </div>
+            
+            <!-- Best Sellers Page -->
+            <div id="best-sellers-page" class="products-page">
+                <div class="page-header">
+                    <h1>پرفروش‌ترین محصولات</h1>
+                    <p>محصولاتی که بیشترین فروش را داشته‌اند</p>
+                </div>
+                <div class="products-grid" id="best-sellers-page-container"></div>
+            </div>
+            
+            <!-- New Arrivals Page -->
+            <div id="new-arrivals-page" class="products-page">
+                <div class="page-header">
+                    <h1>جدیدترین محصولات</h1>
+                    <p>تازه‌ترین محصولات اضافه شده</p>
+                </div>
+                <div class="products-grid" id="new-arrivals-page-container"></div>
+            </div>
+            
+            <!-- Featured Page -->
+            <div id="featured-page" class="products-page">
+                <div class="page-header">
+                    <h1>پیشنهادهای ویژه</h1>
+                    <p>انتخاب شده‌های ما برای شما</p>
+                </div>
+                <div class="products-grid" id="featured-container"></div>
+            </div>
+            
+            <!-- About Us Page -->
+            <div id="about-page" class="about-page">
+                <div class="page-header">
+                    <h1>درباره ما</h1>
+                    <p>سوپرمارکت آنلاین VIP</p>
+                </div>
+                <div class="page-content">
+                    <h2>تاریخچه ما</h2>
+                    <p>سوپرمارکت آنلاین VIP در سال ۱۴۰۰ با هدف ارائه بهترین محصولات با کیفیت عالی و قیمت مناسب تأسیس شد. ما با همکاری با بهترین تولیدکنندگان و تأمین‌کنندگان، محصولات متنوعی را برای رفاه و آسایش شما عزیزان فراهم کرده‌ایم.</p>
+                    
+                    <h2>چرا ما را انتخاب کنید؟</h2>
+                    <p>• کیفیت بالای محصولات</p>
+                    <p>• قیمت‌های مناسب و رقابتی</p>
+                    <p>• تحویل سریع و به موقع</p>
+                    <p>• پشتیبانی ۲۴ ساعته</p>
+                    <p>• ضمانت بازگشت کالا</p>
+                    
+                    <h2>تیم ما</h2>
+                    <p>ما تیمی متشکل از متخصصان با تجربه در زمینه فروش آنلاین هستیم که با عشق و علاقه برای خدمت به شما تلاش می‌کنیم. رضایت شما افتخار ماست.</p>
+                </div>
+            </div>
+            
+            <!-- Contact Us Page -->
+            <div id="contact-page" class="contact-page">
+                <div class="page-header">
+                    <h1>تماس با ما</h1>
+                    <p>ما اینجا هستیم تا به شما کمک کنیم</p>
+                </div>
+                <div class="page-content">
+                    <h2>راه‌های ارتباطی</h2>
+                    <p>شما می‌توانید از طریق راه‌های زیر با ما در ارتباط باشید:</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <i class="fas fa-phone"></i>
+                            <h3>تلفن تماس</h3>
+                            <p>09142750192</p>
+                            <p>09141853815</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>ایمیل</h3>
+                            <p>imanmavot@gmail.com</p>
+                            <p>imanmavat1391@gmail.com</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>آدرس</h3>
+                            <p>بوکان یابان مولوی شرقی نرسیده به مدرسه چهار آبان</p>
+                        </div>
+                    </div>
+                    
+                    <h2>ساعات کاری</h2>
+                    <p>شنبه تا چهارشنبه: ۸ صبح تا ۸ شب</p>
+                    <p>پنجشنبه: ۸ صبح تا ۴ بعدازظهر</p>
+                </div>
+            </div>
+            
+            <!-- Support Page -->
+            <div id="support-page" class="support-page">
+                <div class="page-header">
+                    <h1>پشتیبانی</h1>
+                    <p>ما اینجا هستیم تا به شما کمک کنیم</p>
+                </div>
+                <div class="page-content">
+                    <h2>سوالات متداول</h2>
+                    <p><strong>چگونه می‌توانم سفارشم را پیگیری کنم؟</strong></p>
+                    <p>پس از ثبت سفارش، کد رهگیری برای شما ارسال می‌شود که می‌توانید از طریق بخش پیگیری سفارش در سایت وضعیت آن را بررسی کنید.</p>
+                    
+                    <p><strong>روش‌های پرداخت چه هستند؟</strong></p>
+                    <p>شما می‌توانید از طریق درگاه پرداخت اینترنتی، کارت به کارت و یا پرداخت در محل (برای برخی مناطق) خرید خود را انجام دهید.</p>
+                    
+                    <p><strong>سیاست بازگشت کالا چگونه است؟</strong></p>
+                    <p>در صورت عدم رضایت از کالا، تا ۷ روز پس از تحویل می‌توانید آن را مرجوع کنید. شرایط کامل در صفحه قوانین و مقررات ذکر شده است.</p>
+                    
+                    <h2>فرم تماس با پشتیبانی</h2>
+                    <div class="form-group">
+                        <label for="support-name">نام کامل</label>
+                        <input type="text" id="support-name" placeholder="نام و نام خانوادگی">
+                    </div>
+                    <div class="form-group">
+                        <label for="support-email">ایمیل</label>
+                        <input type="email" id="support-email" placeholder="example@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="support-subject">موضوع</label>
+                        <input type="text" id="support-subject" placeholder="موضوع پیام">
+                    </div>
+                    <div class="form-group">
+                        <label for="support-message">پیام شما</label>
+                        <textarea id="support-message" rows="5" placeholder="متن پیام خود را بنویسید..." style="width: 100%; padding: 0.8rem 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;"></textarea>
+                    </div>
+                    <button class="auth-btn">ارسال پیام</button>
+                </div>
+            </div>
+            
+            <!-- Category Products Page -->
+            <div id="category-page" class="products-page">
+                <div class="page-header">
+                    <h1 id="category-title">دسته‌بندی محصولات</h1>
+                    <p id="category-description"></p>
+                </div>
+                <div class="products-grid" id="category-products-container"></div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Cart Icon -->
+    <div class="cart-icon" id="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cart-count">0</span>
+    </div>
+    
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-cart"></i> سبد خرید شما</h3>
+                <button class="close-cart" id="close-cart"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be added dynamically with JavaScript -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>جمع کل اقلام:</span>
+                        <span id="subtotal">۰ تومان</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>هزینه ارسال:</span>
+                        <span id="shipping">۰ تومان</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>تخفیف:</span>
+                        <span id="discount">۰ تومان</span>
+                    </div>
+                </div>
+                <div class="cart-total">
+                    <span>مبلغ قابل پرداخت:</span>
+                    <span id="cart-total">۰ تومان</span>
+                </div>
+                <button class="checkout-btn"><i class="fas fa-credit-card"></i> تکمیل سفارش</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="quick-view-modal" id="quick-view-modal">
+        <div class="quick-view-content">
+            <button class="close-quick-view" id="close-quick-view"><i class="fas fa-times"></i></button>
+            <div class="quick-view-image">
+                <img src="" alt="" id="quick-view-img">
+            </div>
+            <div class="quick-view-details">
+                <h2 class="quick-view-title" id="quick-view-title"></h2>
+                <div class="product-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="count">(۴۲ نظر)</span>
+                </div>
+                <div class="quick-view-price" id="quick-view-price"></div>
+                <p class="quick-view-description">
+                    این محصول با کیفیت عالی و مواد اولیه مرغوب تولید شده است. مناسب برای استفاده روزانه و حاوی تمام مواد مغذی مورد نیاز بدن می‌باشد. این محصول کاملاً بهداشتی و با مجوزهای لازم از سازمان‌های مربوطه تولید و عرضه می‌شود.
+                </p>
+                <div class="quick-view-actions">
+                    <button class="add-to-cart-lg" id="quick-view-add-to-cart"><i class="fas fa-cart-plus"></i> افزودن به سبد خرید</button>
+                    <button class="add-to-wishlist"><i class="far fa-heart"></i> افزودن به علاقه‌مندی‌ها</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login/Signup Modal -->
+    <div class="auth-modal" id="auth-modal">
+        <div class="auth-content">
+            <div class="auth-header">
+                <h3><i class="fas fa-user"></i> ورود / ثبت‌نام</h3>
+                <button class="close-auth" id="close-auth"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="login-tab">ورود</div>
+                <div class="auth-tab" id="signup-tab">ثبت‌نام</div>
+            </div>
+            <div class="auth-form" id="login-form">
+                <div class="form-group">
+                    <label for="login-email">ایمیل</label>
+                    <input type="email" id="login-email" placeholder="example@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">رمز عبور</label>
+                    <input type="password" id="login-password" placeholder="رمز عبور">
+                </div>
+                <button class="auth-btn">ورود به حساب</button>
+                <div class="auth-footer">
+                    رمز عبور خود را فراموش کرده‌اید؟ <a href="#">بازیابی رمز عبور</a>
+                </div>
+            </div>
+            <div class="auth-form" id="signup-form" style="display: none;">
+                <div class="form-group">
+                    <label for="signup-name">نام کامل</label>
+                    <input type="text" id="signup-name" placeholder="نام و نام خانوادگی">
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">ایمیل</label>
+                    <input type="email" id="signup-email" placeholder="example@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="signup-phone">شماره تلفن</label>
+                    <input type="tel" id="signup-phone" placeholder="۰۹۱۲۳۴۵۶۷۸۹">
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">رمز عبور</label>
+                    <input type="password" id="signup-password" placeholder="رمز عبور">
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">تکرار رمز عبور</label>
+                    <input type="password" id="signup-confirm-password" placeholder="تکرار رمز عبور">
+                </div>
+                <button class="auth-btn">ثبت‌نام</button>
+                <div class="auth-footer">
+                    با ثبت‌نام، <a href="#">قوانین و مقررات</a> را می‌پذیرید
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">محصول به سبد خرید اضافه شد</span>
+    </div>
+<script src="./script.js"></script>
+</body>
+</html>
